@@ -1,0 +1,316 @@
+# depslib dependency file v1.0
+1519485855 source:/home/alex/Documents/MMORPG/Server/src/Utilities/Timing.cpp
+	"Timing.h"
+
+1519485865 /home/alex/Documents/MMORPG/Server/include/Utilities/Timing.h
+	<SFML/System/Clock.hpp>
+
+1518987676 source:/home/alex/Documents/MMORPG/Server/main.cpp
+	"Server.h"
+
+1522421473 /home/alex/Documents/MMORPG/Server/include/Server.h
+	<thread>
+	"Timing.h"
+	"Logging.h"
+	"NetworkManager.h"
+	"ObjectManager.h"
+	"PlayerManager.h"
+	"Database.h"
+
+1519482760 source:/home/alex/Documents/MMORPG/Server/src/Entities/Entity.cpp
+	"Entity.h"
+
+1519482760 /home/alex/Documents/MMORPG/Server/include/Entities/Entity.h
+	<SFML/System/Vector2.hpp>
+
+1519032146 source:/home/alex/Documents/MMORPG/Server/src/AI/AI.cpp
+	"AI.h"
+
+1519482760 /home/alex/Documents/MMORPG/Server/include/AI/AI.h
+	"ObjectManager.h"
+	"PlayerManager.h"
+
+1522418630 /home/alex/Documents/MMORPG/Server/include/Objects/ObjectManager.h
+	<SFML/System/Vector2.hpp>
+	<map>
+	<string>
+	"Entity.h"
+	"Player.h"
+	"PlayerManager.h"
+	"NetworkManager.h"
+
+1522418624 /home/alex/Documents/MMORPG/Server/include/Players/PlayerManager.h
+	"Player.h"
+	<string>
+	<map>
+
+1519482760 source:/home/alex/Documents/MMORPG/Server/src/Entities/Stats.cpp
+	"Stats.h"
+
+1519482760 /home/alex/Documents/MMORPG/Server/include/Entities/Stats.h
+
+1519574935 source:/home/alex/Documents/MMORPG/Server/src/Objects/ObjectManager.cpp
+	"ObjectManager.h"
+
+1519482760 source:/home/alex/Documents/MMORPG/Server/src/Players/Player.cpp
+	"Player.h"
+
+1519482760 /home/alex/Documents/MMORPG/Server/include/Players/Player.h
+	<Entity.h>
+
+1519483230 source:/home/alex/Documents/MMORPG/Server/src/Players/PlayerManager.cpp
+	"PlayerManager.h"
+
+1522421486 source:/home/alex/Documents/MMORPG/Server/src/Server.cpp
+	"Server.h"
+
+1522582591 source:/home/alex/Documents/MMORPG/Server/src/Networking/NetworkManager.cpp
+	"NetworkManager.h"
+
+1522418618 /home/alex/Documents/MMORPG/Server/include/Networking/NetworkManager.h
+	"Logging.h"
+	"PlayerManager.h"
+	"ObjectManager.h"
+	"LoginServer.h"
+	<SFML/Network.hpp>
+	<vector>
+	<queue>
+	<string>
+	<algorithm>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Clock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Export.hpp
+	<SFML/Config.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Config.hpp
+	"TargetConditionals.h"
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Time.hpp
+	<SFML/System/Export.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Vector2.hpp
+	<SFML/System/Vector2.inl>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Vector2.inl
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network.hpp
+	<SFML/System.hpp>
+	<SFML/Network/Ftp.hpp>
+	<SFML/Network/Http.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/Packet.hpp>
+	<SFML/Network/Socket.hpp>
+	<SFML/Network/SocketHandle.hpp>
+	<SFML/Network/SocketSelector.hpp>
+	<SFML/Network/TcpListener.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/Network/UdpSocket.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/FileInputStream.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/Lock.hpp>
+	<SFML/System/MemoryInputStream.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/ThreadLocal.hpp>
+	<SFML/System/ThreadLocalPtr.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Err.hpp
+	<SFML/System/Export.hpp>
+	<ostream>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/FileInputStream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdio>
+	<string>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/InputStream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/NonCopyable.hpp
+	<SFML/System/Export.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Lock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/MemoryInputStream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/Export.hpp>
+	<cstdlib>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Mutex.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Sleep.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/String.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Utf.hpp>
+	<iterator>
+	<locale>
+	<string>
+	<SFML/System/String.inl>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Utf.hpp
+	<SFML/Config.hpp>
+	<algorithm>
+	<locale>
+	<string>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Utf.inl
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/String.inl
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Thread.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdlib>
+	<SFML/System/Thread.inl>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Thread.inl
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/ThreadLocal.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<cstdlib>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/ThreadLocalPtr.hpp
+	<SFML/System/ThreadLocal.hpp>
+	<SFML/System/ThreadLocalPtr.inl>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/ThreadLocalPtr.inl
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Vector3.hpp
+	<SFML/System/Vector3.inl>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/System/Vector3.inl
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/Ftp.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/Export.hpp
+	<SFML/Config.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/TcpSocket.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/Socket.hpp>
+	<SFML/System/Time.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/Socket.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/SocketHandle.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<vector>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/SocketHandle.hpp
+	<SFML/Config.hpp>
+	<basetsd.h>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/Http.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<map>
+	<string>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/IpAddress.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/System/Time.hpp>
+	<istream>
+	<ostream>
+	<string>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/Packet.hpp
+	<SFML/Network/Export.hpp>
+	<string>
+	<vector>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/SocketSelector.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/TcpListener.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/Socket.hpp>
+	<SFML/Network/IpAddress.hpp>
+
+1470642836 /home/alex/Documents/MMORPG/SFML-2.4.0/include/SFML/Network/UdpSocket.hpp
+	<SFML/Network/Export.hpp>
+	<SFML/Network/Socket.hpp>
+	<SFML/Network/IpAddress.hpp>
+	<vector>
+
+1519582140 /home/alex/Documents/MMORPG/Server/include/Networking/Instruction.h
+	"NetworkManager.h"
+	"PlayerManager.h"
+	"ObjectManager.h"
+
+1519582077 source:/home/alex/Documents/MMORPG/Server/src/Networking/Instruction.cpp
+	"Instruction.h"
+
+1522261900 /home/alex/Documents/MMORPG/Server/Utilities/include/Logging.h
+	<iostream>
+	<string>
+	"Timing.h"
+
+1522582563 source:/home/alex/Documents/MMORPG/Server/src/Utilities/Logging.cpp
+	"Logging.h"
+
+1522428889 /home/alex/Documents/MMORPG/Server/include/Players/LoginServer.h
+	<algorithm>
+	"Database.h"
+
+1522526468 source:/home/alex/Documents/MMORPG/Server/src/Players/LoginServer.cpp
+	"LoginServer.h"
+
+1522412330 /home/alex/Documents/MMORPG/Server/include/Networking/Client.h
+	<string>
+	<SFML/Network/IpAddress.hpp>
+	<SFML/Network/TcpSocket.hpp>
+	<SFML/Network/Packet.hpp>
+
+1522412350 source:/home/alex/Documents/MMORPG/Server/src/Networking/Client.cpp
+	"Client.h"
+
+1522582508 source:/home/alex/Documents/MMORPG/Server/src/Utilities/Database.cpp
+	"Database.h"
+
+1522582278 /home/alex/Documents/MMORPG/Server/include/Utilities/Database.h
+	<string>
+	<vector>
+	<map>
+	<sqlite3.h>
+	"Logging.h"
+

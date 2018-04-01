@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Server" />
+		<Option pch_mode="2" />
+		<Option compiler="clang" />
+		<Option virtualFolders="include/Utilities/;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/Utilities" />
+					<Add directory="include" />
+					<Add directory="include/Objects" />
+					<Add directory="include/Players" />
+					<Add directory="include/Entities" />
+					<Add directory="include/AI" />
+					<Add directory="include/Networking" />
+					<Add directory="Utilities/include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/Utilities" />
+					<Add directory="include" />
+					<Add directory="include/Objects" />
+					<Add directory="include/Players" />
+					<Add directory="include/Entities" />
+					<Add directory="include/AI" />
+					<Add directory="include/Networking" />
+					<Add directory="Utilities/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Weverything" />
+			<Add option="-std=c++11" />
+			<Add directory="../SFML-2.4.0/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-pthread" />
+			<Add library="sfml-network" />
+			<Add library="sfml-system" />
+			<Add library="sqlite3" />
+			<Add directory="../SFML-2.4.0/lib" />
+		</Linker>
+		<Unit filename="Utilities/include/Logging.h">
+			<Option virtualFolder="include/Utilities/" />
+		</Unit>
+		<Unit filename="include/AI/AI.h" />
+		<Unit filename="include/Entities/Entity.h" />
+		<Unit filename="include/Entities/Stats.h" />
+		<Unit filename="include/Networking/NetworkManager.h" />
+		<Unit filename="include/Objects/ObjectManager.h" />
+		<Unit filename="include/Players/LoginServer.h" />
+		<Unit filename="include/Players/Player.h" />
+		<Unit filename="include/Players/PlayerManager.h" />
+		<Unit filename="include/Server.h" />
+		<Unit filename="include/Utilities/Database.h" />
+		<Unit filename="include/Utilities/Timing.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="src/AI/AI.cpp" />
+		<Unit filename="src/Entities/Entity.cpp" />
+		<Unit filename="src/Entities/Stats.cpp" />
+		<Unit filename="src/Networking/NetworkManager.cpp" />
+		<Unit filename="src/Objects/ObjectManager.cpp" />
+		<Unit filename="src/Players/LoginServer.cpp" />
+		<Unit filename="src/Players/Player.cpp" />
+		<Unit filename="src/Players/PlayerManager.cpp" />
+		<Unit filename="src/Server.cpp" />
+		<Unit filename="src/Utilities/Database.cpp" />
+		<Unit filename="src/Utilities/Logging.cpp" />
+		<Unit filename="src/Utilities/Timing.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
