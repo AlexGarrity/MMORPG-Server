@@ -11,17 +11,17 @@ bool Database::Initialise(std::string dbName)
     databaseName = dbName;
     errorCode = sqlite3_open("database.db", &database);     //Open the database, and return its error code into errorCode
 
-    Logging::Log("Error code when opening database: " + std::to_string(errorCode), Logging::Debug);        //Log the error code (should be 0)
+    Logging::Log("Error code when opening database: " + std::to_string(errorCode), Logging::Severity::Debug);        //Log the error code (should be 0)
 
     if (errorCode != 0) {       //If the error code isn't 0...
-        Logging::Log("Could not connect to the database: " + databaseName, Logging::Important);     //Log the error
+        Logging::Log("Could not connect to the database: " + databaseName, Logging::Severity::Important);     //Log the error
         sqlite3_close(database);        //Close the database
         return false;       //Return false
     }
     if (!TestDatabase()) {
         return false;       //If the test fails, return false
     }
-    Logging::Log("Connected to the database", Logging::Debug);      //Log that the server has successfully connected
+    Logging::Log("Connected to the database", Logging::Severity::Debug);      //Log that the server has successfully connected
     return true;        //Return true
 }
 
@@ -59,7 +59,7 @@ QueryResult Database::Execute(std::string query)
 
         columnCount = sqlite3_column_count(statement);      //Get the column count from the statment
 
-        Logging::Log("Column count is: " + std::to_string(columnCount), Logging::Debug);
+        Logging::Log("Column count is: " + std::to_string(columnCount), Logging::Severity::Debug);
 
         //Iterate through the columns, using variable i
         for (unsigned int i = 0; i < columnCount; i++) {
@@ -81,7 +81,7 @@ bool Database::TestDatabase()
     //Execute the following command to check the database size (should have at least one dummy entry)
     QueryResult result = Execute("SELECT Accounts.* FROM Accounts;");
     //Log the number of entries
-    Logging::Log("Database returned " + std::to_string(result.columns.size()) + " items", Logging::Debug);
+    Logging::Log("Database returned " + std::to_string(result.columns.size()) + " items", Logging::Severity::Debug);
     if (result.QueryColumn("Email") != "" && result.QueryColumn("Email") != "NULL") {
         //Return true as the table is proven to have been populated
         return true;

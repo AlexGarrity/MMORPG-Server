@@ -10,6 +10,7 @@
 #include "Logging.h"
 
 //Only capable of handling a single result, but only a single should be required
+//Now with improved capabilities - Multiple results
 struct QueryResult {
 
     std::map<std::string, std::string> columns;
@@ -30,8 +31,9 @@ struct QueryResult {
 
     void OutputResult() {
         std::map<std::string, std::string>::iterator it;
+        Logging::Log("Performed a query", Logging::Severity::Debug);
         for (it = columns.begin(); it != columns.end(); ++it) {
-            Logging::Log(it->first + "\t:\t" + it->second, Logging::Debug);
+            Logging::Log(it->first + "\t:\t" + it->second, Logging::Severity::Debug);
         }
     }
 };

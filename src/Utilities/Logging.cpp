@@ -10,11 +10,9 @@ Logging::~Logging()
     //dtor
 }
 
-void Logging::Log (std::string message, Severity s = Info)
+void Logging::Log (std::string message, Severity s = Severity::Info)
 {
-    if (s != Debug) {
             std::cout << "(" << ISOTime() << ") - \t" << message << std::endl;
-            }
 }
 
 std::string Logging::ISOTime()

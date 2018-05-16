@@ -15,3 +15,13 @@ void Entity::Update()
 {
 
 }
+
+sf::Vector2u *Entity::GetPosition()
+{
+    sf::Vector2u positions[2] = {worldPosition, cellPosition};
+    return positions;
+}
+
+bool Entity::CheckVitals() {
+    return stats.health.value < 0 ? true : false;
+}

@@ -9,6 +9,7 @@
 #include "NetworkManager.h"
 #include "ObjectManager.h"
 #include "PlayerManager.h"
+#include "MapManager.h"
 #include "Database.h"
 
 class Server

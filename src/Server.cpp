@@ -6,9 +6,13 @@ unsigned char Server::lastTick = 0;
 
 bool Server::Start()
 {
-    NetworkManager::Initialise();
-
+    if (!NetworkManager::Initialise()) {
+        return false;
+    }
     if (!Database::Initialise("database")) {
+        return false;
+    }
+    if (!MapManager::LoadTestMap()) {
         return false;
     }
 
@@ -22,24 +26,14 @@ void Server::Update()
     lastTick = tick;
     elapsedTime += Timing::deltaTime;
 
-    if (elapsedTime > 0.5f) {
-        elapsedTime = 0;
-        tick += 1;
-
-        if (tick != lastTick) {
-            if (tick % 1 == 0) {
-                FastUpdate();
-            }
-
-            if (tick % 2 == 0) {
-                MediumUpdate();
-            }
-
-            if (tick % 8 == 0) {
-                LongUpdate();
-                tick = 0;
-            }
-        }
+    if ((int) elapsedTime % 1 == 0) {
+        FastUpdate();
+    }
+    if ((int) elapsedTime % 4 == 0) {
+        MediumUpdate();
+    }
+    if ((int) elapsedTime % 8 == 0) {
+        LongUpdate();
     }
 
     Timing::Update();
@@ -51,23 +45,20 @@ void Server::ObjectUpdate() {
 
 void Server::NetworkUpdate() {
     NetworkManager::Update();
-    InstructionParser::Parse();
 }
 
 void Server::FastUpdate()
 {
-    Logging::Log("Fast Update", Logging::Debug);
     ObjectUpdate();
 }
 
 void Server::MediumUpdate()
 {
-    Logging::Log("Medium Update", Logging::Debug);
     NetworkUpdate();
 }
 
 void Server::LongUpdate()
 {
     //Logging::Log("Long Update");
-    //NetworkManager::Heartbeat();  Unused because my max player count isn't going anywhere above 50 at any given point
+    //NetworkManager::Heartbeat();  Unused because my max player count isn't going anywhere above 5 at any given point
 }

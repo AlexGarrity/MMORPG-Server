@@ -12,7 +12,7 @@ public:
     Logging();
     virtual ~Logging();
 
-    static enum Severity {Debug, Info, Important};
+    static enum class Severity {Debug, Info, Important};
 
     static void Log (std::string message, Severity s);
 protected:

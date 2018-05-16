@@ -12,5 +12,13 @@ Player::~Player()
 
 void Player::Update()
 {
+    CheckVitals();
+}
 
+std::string Player::ToString()
+{
+    std::string result = "";
+    result += std::to_string(worldPosition.x) + std::to_string(worldPosition.y) + std::to_string(cellPosition.x) + std::to_string(cellPosition.y);
+
+    return result;
 }

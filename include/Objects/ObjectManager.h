@@ -5,9 +5,11 @@
 
 #include <map>
 #include <string>
+#include <random>
 
 #include "Entity.h"
 #include "Player.h"
+#include "MapManager.h"
 #include "PlayerManager.h"
 #include "NetworkManager.h"
 
@@ -21,7 +23,8 @@ public:
 protected:
 
 private:
-    static void PlaceEntities();
+    static bool PlaceEntities();
+    static void PlaceEntity(std::string entityType);
 
     static std::map<std::string, Entity*> entityMap;
     static std::map<std::string, Entity*>::iterator entityIterator;

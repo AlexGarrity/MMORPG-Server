@@ -13,5 +13,5 @@ void Timing::Update()
 
 long Timing::GetElapsedTime()
 {
-    return (long)elapsedTime;
+    return (long) elapsedTime;
 }
